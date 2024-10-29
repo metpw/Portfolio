@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Metta P</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <img src="mofusand.jpg" alt="Metta P's Profile Picture" style="width:150px; border-radius: 50%; text-align:center">
+            <p>Welcome to my portfolio! I'm currently a high school student, who's passionate about badminton and mini games. I also have numerous academic achievements and projects made over the course of my school years.</p>
+        </section>
+        <section id="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="badminton.jpg" style="width:100%">
+                </div>
+        
+                <div class="mySlides fade">
+                    <img src="news report.jpg" style="width:100%">
+                </div>
+        
+                <div class="mySlides fade">
+                    <img src="ux.png" style="width:100%">
+                </div>
+        
+                <!-- Add more images as needed -->
+        
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+        
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li>
+                    <h3>Badminton Tournament</h3>
+                    <p>A group of my friends and I arranged a small scale badminton tournament among our schoolmates. The goal of our project was to encourage others to exercise and create a sense of bonding. It was a very fun and enjoyable experience.</p>
+                    <a href="#">View Project</a>
+                </li>
+                <li>
+                    <h3>News Report Competition</h3>
+                    <p>To celebrate a national holiday, me and my friends were chosen to make a video reporting on how the holiday was celebrated around us in news channel style. We collected lots of data and interviewed a variety of individuals, and managed to win 2nd place through our efforts.</p>
+                    <a href="#">View Project</a>
+                </li>
+                <li>
+                    <h3>Game UX Analysis</h3>
+                    <p>A personal project that was initiated by an interest of mine in RPG games. I regularly play this game and have come to notice that the developers pay much attention to improving the game's UX every update. I wanted to analyze the creativity in their problem solving and ability to consider and identify the user's problems.</p>
+                    <a href="#">View Project</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, please reach out at <a href="mailto:your-email@example.com">myemail@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Metta P. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        
+        function plusSlides(n) {
+            slideIndex += n - 1; // Adjust index to show the next or previous slide
+            showSlides();
+        }
+        </script>
+        
+</body>
+</html>
